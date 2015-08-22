@@ -10,18 +10,15 @@ myApp.config(['$routeProvider', function($routeProvider) {
 }])
 
 myApp.controller('View2Ctrl', function($scope) {
-      $scope.images = [
-        {'name': 'Nexus S',
-          'snippet': 'Fast just got faster with Nexus S.'},
-        {'name': 'Motorola XOOM™ with Wi-Fi',
-          'snippet': 'The Next, Next Generation tablet.'},
-        {'name': 'MOTOROLA XOOM™',
-          'snippet': 'The Next, Next Generation tablet.'}
-      ];
+  $scope.images = [
+    {'title': 'golden gate bridge',
+      'snippet': 'It is actually golden',
+      'imageUrl': 'http://40.media.tumblr.com/53cb43328372c9dd801ef6380274ff1f/tumblr_nt36geNiIO1uanhfqo1_1280.jpg'},
+    {'title': 'going somewhere',
+      'snippet': 'are you?',
+      'imageUrl': 'http://40.media.tumblr.com/662e9041340d0006b0e5a83b0ec0f785/tumblr_nt36ch8kxK1uanhfqo1_1280.jpg'},
+    {'title': 'lens flare',
+      'snippet': 'this was cool',
+      'imageUrl': 'http://41.media.tumblr.com/f14a02be5d52ec3ae51397522067ba0a/tumblr_nsmbq4vSYI1uanhfqo1_1280.jpg'}
+  ];
 });
-
-myApp.controller('View2Ctrl', ['$scope', 'Image',
-  function($scope, Image) {
-    $scope.images = Image.query();
-    $scope.orderProp = 'age';
-  }]);
