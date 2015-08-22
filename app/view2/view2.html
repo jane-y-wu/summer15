@@ -1,3 +1,21 @@
+<h1>Your images</h1>
+<div>
+  Search: <input ng-model="query">
+  Sort by:
+  <select ng-model="orderProp">
+    <option value="age">Newest</option>
+
+  </select>
+
+  <ul>
+    <li ng-repeat="image in images | filter:query | orderBy:orderProp">
+      <span> {{image.title}} </span>
+      <p> {{image.snippet}} </p>
+    </li>
+  </ul>
+
+</div>
+
 <p>This is the partial for view 2.</p>
 <p>
   Showing of 'interpolate' filter:
