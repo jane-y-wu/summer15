@@ -3,6 +3,7 @@
   Search: <input ng-model="query">
   Sort by:
   <select ng-model="orderProp">
+    <option value="title">Alphabetical</option>
     <option value="age">Newest</option>
 
   </select>
@@ -16,11 +17,27 @@
     </li>
   </ul>
 
+  <!--<form name="uploadNew" ng-controller="newPic as additionCtrl" ng-submit="uploadNew.$valid && additionCtrl.addPic()" novalidate>-->
 
-  <ul>
+    <!--<label>Image title</label>-->
+    <!--<textarea ng-model="additionCtrl.image.title" required></textarea></br>-->
+    <!--<label>Image description</label>-->
+    <!--<textarea ng-model="additionCtrl.image.desc" required></textarea></br>-->
+    <!--<label>Image URL</label>-->
+    <!--<textarea ng-model="additionCtrl.image.linkage" required></textarea>-->
 
+    <!--<div>upload is {{uploadNew.$valid}}</div>-->
+    <!--<input type="submit" value="Upload"/>-->
 
-  </ul>
+  <!--</form>-->
+
+  <form ng-submit="submit()" ng-controller="View2Ctrl">
+  Enter text and hit enter:
+    <!--<input type="text" ng-model="uploadCtrl.text" name="text" />-->
+    <input type="text" ng-model="text" name="text" />
+    <input type="submit" id="submit" value="Submit" />
+    <pre>list={{list}}</pre>
+  </form>
 
 </div>
 
